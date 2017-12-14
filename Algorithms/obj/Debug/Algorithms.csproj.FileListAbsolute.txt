@@ -1,0 +1,10 @@
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\bin\Debug\Algorithms.exe.config
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\bin\Debug\Algorithms.exe
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\bin\Debug\Algorithms.pdb
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\bin\Debug\DataStructures.exe
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\bin\Debug\DataStructures.pdb
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\bin\Debug\DataStructures.exe.config
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.csprojResolveAssemblyReference.cache
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.exe
+C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.pdb
