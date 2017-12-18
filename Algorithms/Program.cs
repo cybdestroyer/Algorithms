@@ -13,12 +13,13 @@ namespace Algorithms
             {
                 bool running = true;
 
-                Console.WriteLine("Welcome to the application!");
+                Console.WriteLine("Welcome!");
                 Console.WriteLine("Please wait while we get everything ready...");
 
                 do
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine("\nWhat is your selection?");
+                    Console.WriteLine("\tbubble-sort\n\texit\n");
 
                     var input = Console.ReadLine();
 
@@ -29,6 +30,7 @@ namespace Algorithms
                             break;
                         case "exit":
                             running = false;
+                            Console.WriteLine("Program Teminating");
                             break;
                         default:
                             Console.WriteLine("Did not recognize user input.");

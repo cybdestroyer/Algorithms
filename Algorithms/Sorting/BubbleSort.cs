@@ -6,26 +6,52 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Sorting
 {
-    public class BubbleSort
+    /*
+        https://en.wikipedia.org/wiki/Bubble_sort
+     */
+    public class BubbleSort : Sort
     {
         #region Members
         private int[] Data { get; set; }
         #endregion
+
+        #region Public Methods
+        public BubbleSort(int size)
+        {
+            Data = new int[size];
+        }
 
         public BubbleSort(int[] data)
         {
             this.Data = data;
         }
 
+        public bool Add(int value)
+        {
+            for (int i = 0; i < Data.Length; i++)
+            {
+                if (Data[i] == 0)
+                {
+                    Data[i] = value;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public void Sort()
         {
-            for (int i = Data.Length; i > 0; i--)
+            for (int i = 0; i < Data.Length; i++)
             {
-                if (Data[i] < Data[i - 1])
+                for (int j = 0; j < Data.Length - i - 1; j++)
                 {
-                    int tmp = Data[i];
-                    Data[i] = Data[i - 1];
-                    Data[i - 1] = tmp;
+                    if (Data[j] > Data[j + 1])
+                    {
+                        int temp = Data[j];
+                        Data[j] = Data[j + 1];
+                        Data[j + 1] = temp;
+                    }
                 }
             }
         }
@@ -45,5 +71,25 @@ namespace Algorithms.Sorting
 
             return true;
         }
+
+        public string toString()
+        {
+            return toString(Data);
+        }
+        #endregion
+
+        #region Private Methods
+        private string toString(int[] array)
+        {
+            var sb = new StringBuilder();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                sb.Append("[" + array[i].ToString() + "]\t");
+            }
+
+            return sb.ToString();
+        }
+        #endregion
     }
 }
