@@ -11,6 +11,8 @@ namespace Algorithms.Sorting
         bool IsSorted();
         bool Add(int value);
 
+        void Sort();
+
         int[] GetData();
     }
 }
