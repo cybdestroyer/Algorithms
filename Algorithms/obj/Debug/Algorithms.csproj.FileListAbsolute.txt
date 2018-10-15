@@ -8,3 +8,14 @@ C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\
 C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.csproj.CoreCompileInputs.cache
 C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.exe
 C:\Users\TeranL\Documents\Visual Studio 2017\Projects\Algorithms\Algorithms\obj\Debug\Algorithms.pdb
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\bin\Debug\Algorithms.exe.config
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\bin\Debug\Algorithms.exe
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\bin\Debug\Algorithms.pdb
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\bin\Debug\DataStructures.exe
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\bin\Debug\DataStructures.pdb
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\bin\Debug\DataStructures.exe.config
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\obj\Debug\Algorithms.csprojAssemblyReference.cache
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\obj\Debug\Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\obj\Debug\Algorithms.csproj.CopyComplete
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\obj\Debug\Algorithms.exe
+C:\Users\1269458\Documents\Exercise\Algorithms\Algorithms\obj\Debug\Algorithms.pdb

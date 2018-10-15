@@ -9,19 +9,19 @@ namespace Algorithms.Sorting
     /*
         https://en.wikipedia.org/wiki/Quicksort
      */
-    public class Quicksort : Sort
+    public class QuickSort : Sort
     {
         #region Members
-        private int[] Data { get; set; }
+        public int[] Data { get; }
         #endregion
 
         #region Public Methods
-        public Quicksort(int size)
+        public QuickSort(int size)
         {
             Data = new int[size];
         }
 
-        public Quicksort(int[] array)
+        public QuickSort(int[] array)
         {
             this.Data = array;
         }
@@ -38,9 +38,8 @@ namespace Algorithms.Sorting
                 if (Data[i] == 0)
                 {
                     Data[i] = value;
+                    return true;
                 }
-
-                return true;
             }
 
             return false;

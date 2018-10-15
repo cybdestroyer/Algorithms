@@ -8,11 +8,11 @@ namespace Algorithms.Sorting
 {
     public interface Sort
     {
+        int[] Data { get; }
+
         bool IsSorted();
         bool Add(int value);
 
         void Sort();
-
-        int[] GetData();
     }
 }

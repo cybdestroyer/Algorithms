@@ -12,7 +12,7 @@ namespace Algorithms.Sorting
     public class BubbleSort : Sort
     {
         #region Members
-        private int[] Data { get; set; }
+        public int[] Data { get; }
         #endregion
 
         #region Public Methods
