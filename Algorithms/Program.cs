@@ -29,8 +29,8 @@ namespace Algorithms
                             OpenDialog(Sort.BubbleSort);
                             break;
                         case "exit":
-                            running = false;
                             Console.WriteLine("Program Teminating");
+                            running = false;
                             break;
                         default:
                             Console.WriteLine("Did not recognize user input.");
@@ -50,7 +50,6 @@ namespace Algorithms
             switch (type)
             {
                 case Sort.BubbleSort:
-                    Console.WriteLine("Running BubbleSort Algorithm");
                     BubbleSort();
                     break;
                 default: break;
@@ -59,10 +58,15 @@ namespace Algorithms
 
         static void BubbleSort()
         {
+            Console.WriteLine("Running BubbleSort Algorithm");
+            Console.WriteLine("");
+
             var running = true;
 
             do
             {
+                Console.WriteLine("What is your action?");
+                Console.WriteLine("\tisSorted | delete | sort | add | exit\n");
                 var input = Console.ReadLine();
 
                 switch (input)
@@ -73,8 +77,10 @@ namespace Algorithms
                         break;
                     case "delete":
                     case "sort":
-                    case "add":
                         Console.WriteLine("Not yet implemented");
+                        break;
+                    case "add":
+                        bubbleSort.Add(Convert.ToInt32(input));
                         break;
                     case "exit":
                         running = false;
