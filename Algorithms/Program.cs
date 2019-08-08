@@ -52,7 +52,8 @@ namespace Algorithms
                 case Sort.BubbleSort:
                     BubbleSort();
                     break;
-                default: break;
+                default:
+                    break;
             }
         }
 

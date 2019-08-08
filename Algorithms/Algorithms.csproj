@@ -48,6 +48,7 @@
     <Compile Include="Sorting\Extensions.cs" />
     <Compile Include="Sorting\MergeSort.cs" />
     <Compile Include="Sorting\QuickSort.cs" />
+    <Compile Include="Sorting\ShellSort.cs" />
     <Compile Include="Sorting\Sort.cs" />
   </ItemGroup>
   <ItemGroup>

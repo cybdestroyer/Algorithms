@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Sorting
 {
-    public interface Sort
+    public interface ISort
     {
-        int[] Data { get; }
+        List<int> Data { get; }
 
         bool IsSorted();
         bool Add(int value);
