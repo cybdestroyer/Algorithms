@@ -7,15 +7,20 @@ using System.Threading.Tasks;
 namespace Algorithms.Sorting
 {
     /*
-        https://en.wikipedia.org/wiki/Bubble_sort
+        https://en.wikipedia.org/wiki/Quicksort
      */
-    public class BubbleSort : ISort
+    public class QuickSort : ISort
     {
         #region Members
         public List<int> Data { get; set; }
         #endregion
 
         #region Public Methods
+        public bool IsSorted()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Add(int value)
         {
             for (int i = 0; i < Data.Count; i++)
@@ -33,12 +38,6 @@ namespace Algorithms.Sorting
         public void Sort()
         {
             
-        }
-
-        public bool IsSorted()
-        {
-           
-            return true;
         }
         #endregion
     }
