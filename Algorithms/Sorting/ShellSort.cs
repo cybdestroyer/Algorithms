@@ -36,20 +36,18 @@ namespace Algorithms.Sorting
         {
             if (Data.Count > 1)
             {
-                bool isSorted = true;
-
                 for (int i = 0; i < Data.Count - 1; i++)
                 {
                     if (Data[i] > Data[i + 1])
                     {
-                        isSorted = false;
+                        // Only need one item out of place to fail
+                        return false;
                     }
                 }
-
-                return isSorted;
             }
 
-            return false;
+            // If empty return true
+            return true;
         }
 
         public void Sort()

@@ -49,7 +49,7 @@
     <Compile Include="Sorting\MergeSort.cs" />
     <Compile Include="Sorting\QuickSort.cs" />
     <Compile Include="Sorting\ShellSort.cs" />
-    <Compile Include="Sorting\Sort.cs" />
+    <Compile Include="Sorting\ISort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
