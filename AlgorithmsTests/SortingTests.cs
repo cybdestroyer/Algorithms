@@ -69,19 +69,21 @@ namespace AlgorithmsTests
         }
 
         [TestMethod]
-        [TestCategory("BubbleSort - Negatives")]
-        public void BubbleSort4()
+        [TestCategory("QuickSort - Basic")]
+        public void QuickSort1()
         {
-            //var bubbleSort = new BubbleSort(5);
-            //bubbleSort.Add(-1);
-            //bubbleSort.Add(-2);
-            //bubbleSort.Add(-3);
-            //bubbleSort.Add(-4);
-            //bubbleSort.Add(-5);
+            var quickSort = new QuickSort();
+            quickSort.Add(14);
+            quickSort.Add(11);
+            quickSort.Add(6);
+            quickSort.Add(3);
+            quickSort.Add(134);
+            quickSort.Add(44);
+            quickSort.Add(87);
 
-            //bubbleSort.Sort();
+            quickSort.Sort();
 
-            //Assert.IsTrue(bubbleSort.IsSorted());
+            Assert.IsTrue(quickSort.IsSorted());
         }
     }
 }

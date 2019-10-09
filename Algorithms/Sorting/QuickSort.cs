@@ -9,36 +9,62 @@ namespace Algorithms.Sorting
     /*
         https://en.wikipedia.org/wiki/Quicksort
      */
-    public class QuickSort : ISort
+    public class QuickSort : ComparisonSort
     {
-        #region Members
-        public List<int> Data { get; set; }
-        #endregion
-
-        #region Public Methods
-        public bool IsSorted()
+        public QuickSort()
         {
-            throw new NotImplementedException();
+            Data = new List<int>();
         }
 
-        public bool Add(int value)
+        public override void Sort()
         {
-            for (int i = 0; i < Data.Count; i++)
+            base.Sort();
+
+            QuicksortRecursive(Data, 0, Data.Count - 1);
+        }
+
+        private int Partition(List<int> numbers, int left, int right)
+        {
+            int pivot = numbers[left];
+
+            do
             {
-                if (Data[i] == 0)
+                while (numbers[left] < pivot)
                 {
-                    Data[i] = value;
-                    return true;
+                    left++;
                 }
-            }
 
-            return false;
+                while (numbers[right] > pivot)
+                {
+                    right--;
+                }
+
+                if (left < right)
+                {
+                    int temp = numbers[right];
+                    numbers[right] = numbers[left];
+                    numbers[left] = temp;
+                }
+                else
+                {
+                    return right;
+                }
+
+            } while (true);
         }
 
-        public void Sort()
+        private void QuicksortRecursive(List<int> array, int left, int right)
         {
-            
+            if (left < right)
+            {
+                int pivot = Partition(array, left, right);
+
+                if (pivot > 1)
+                    QuicksortRecursive(array, left, pivot - 1);
+
+                if (pivot + 1 < right)
+                    QuicksortRecursive(array, pivot + 1, right);
+            }
         }
-        #endregion
     }
 }

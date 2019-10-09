@@ -18,6 +18,8 @@ namespace Algorithms.Sorting
 
         public override void Sort()
         {
+            base.Sort();
+
             if (Data != null && Data.Count > 1)
             {
                 int i, j, inc, temp;
