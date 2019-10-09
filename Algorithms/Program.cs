@@ -1,5 +1,6 @@
-﻿using Algorithms.Sorting;
-using System;
+﻿using System;
+using Algorithms.Common;
+using Algorithms.Sorting;
 
 namespace Algorithms
 {
@@ -14,20 +15,22 @@ namespace Algorithms
                 bool running = true;
 
                 Console.WriteLine("Welcome!");
-                Console.WriteLine("Please wait while we get everything ready...");
+                Console.WriteLine("Please wait while we get everything ready...\n\n");
 
                 do
                 {
-                    Console.WriteLine("\nWhat is your selection?");
-                    Console.WriteLine("\tbubble-sort\n\texit\n");
+                    Console.WriteLine("== What is your selection? ==");
+                    Console.WriteLine(CommonUtils.Dialogue.MainMenuOptions);
 
                     var input = Console.ReadLine();
 
                     switch (input)
                     {
+                        case "1":
                         case "bubble-sort":
                             OpenDialog(Sort.BubbleSort);
                             break;
+                        case "0":
                         case "exit":
                             Console.WriteLine("Program Teminating");
                             running = false;
