@@ -14,8 +14,7 @@ namespace Algorithms
             {
                 bool running = true;
 
-                Console.WriteLine("Welcome!");
-                Console.WriteLine("Please wait while we get everything ready...\n\n");
+                Console.WriteLine(CommonUtils.Dialogue.InitialGreeting);
 
                 do
                 {
@@ -62,10 +61,12 @@ namespace Algorithms
 
         static void BubbleSort()
         {
+            bubbleSort = new BubbleSort();
+
             Console.WriteLine("Running BubbleSort Algorithm");
             Console.WriteLine("");
 
-            var running = true;
+            bool running = true;
 
             do
             {
@@ -77,7 +78,7 @@ namespace Algorithms
                 {
                     case "isSorted":
                         if (bubbleSort.IsSorted())
-                            Console.Write("TRUE");
+                            Console.WriteLine("TRUE");
                         break;
                     case "delete":
                     case "sort":

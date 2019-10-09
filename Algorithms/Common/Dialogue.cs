@@ -22,6 +22,18 @@ namespace Algorithms.Common
                 return sb.ToString();
             }
         }
+        public string InitialGreeting
+        {
+            get
+            {
+                StringBuilder sb = new StringBuilder();
+
+                sb.Append("Welcome!\n");
+                sb.Append("Please wait while we get everything ready...\n\n");
+
+                return sb.ToString();
+            }
+        }
 
         public static Dialogue Build()
         {

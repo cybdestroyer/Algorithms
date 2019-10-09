@@ -9,50 +9,42 @@ namespace Algorithms.Sorting
     /*
         https://en.wikipedia.org/wiki/Shellsort
      */
-    public class ShellSort : ISort
+    public class ShellSort : ComparisonSort
     {
-        public List<int> Data { get; set; }
-
-        public bool Add(int value)
+        public ShellSort()
         {
-            try
-            {
-                if (value > 0)
-                {
-                    Data.Add(value);
-
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            return false;
+            Data = new List<int>();
         }
 
-        public bool IsSorted()
+        public override void Sort()
         {
-            if (Data.Count > 1)
+            if (Data != null && Data.Count > 1)
             {
-                for (int i = 0; i < Data.Count - 1; i++)
+                int i, j, inc, temp;
+
+                inc = 3;
+                while(inc > 0)
                 {
-                    if (Data[i] > Data[i + 1])
+                    for (i = 0; i < Data.Count; i++)
                     {
-                        // Only need one item out of place to fail
-                        return false;
+                        j = i;
+                        temp = Data[i];
+                        while ((j >= inc) && (Data[j - inc] > temp))
+                        {
+                            Data[j] = Data[j - inc];
+                            j = j - inc;
+                        }
+                        Data[j] = temp;
                     }
+
+                    if (inc / 2 != 0)
+                        inc = inc / 2;
+                    else if (inc == 1)
+                        inc = 0;
+                    else
+                        inc = 1;
                 }
             }
-
-            // If empty return true
-            return true;
-        }
-
-        public void Sort()
-        {
-            throw new NotImplementedException();
         }
     }
 }

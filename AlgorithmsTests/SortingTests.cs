@@ -10,54 +10,62 @@ namespace AlgorithmsTests
         [TestCategory("Bubble Sort - Basic")]
         public void BubbleSort1()
         {
-            //var bubbleSort = new BubbleSort(10);
-            //Assert.IsTrue(bubbleSort.Add(12));
-            //Assert.IsTrue(bubbleSort.Add(8));
-            //Assert.IsTrue(bubbleSort.Add(21));
-            //Assert.IsTrue(bubbleSort.Add(78));
-            //Assert.IsTrue(bubbleSort.Add(6));
-            //Assert.IsTrue(bubbleSort.Add(43));
-            //Assert.IsTrue(bubbleSort.Add(48));
-            //Assert.IsTrue(bubbleSort.Add(50));
-            //Assert.IsTrue(bubbleSort.Add(17));
-            //Assert.IsTrue(bubbleSort.Add(103));
+            var bubbleSort = new BubbleSort();
+            // Assert you can add integers
+            Assert.IsTrue(bubbleSort.Add(12));
+            Assert.IsTrue(bubbleSort.Add(8));
+            Assert.IsTrue(bubbleSort.Add(21));
+            Assert.IsTrue(bubbleSort.Add(78));
+            Assert.IsTrue(bubbleSort.Add(6));
+            Assert.IsTrue(bubbleSort.Add(43));
+            Assert.IsTrue(bubbleSort.Add(48));
+            Assert.IsTrue(bubbleSort.Add(50));
+            Assert.IsTrue(bubbleSort.Add(17));
+            Assert.IsTrue(bubbleSort.Add(103));
 
-            //Assert.IsFalse(bubbleSort.Add(10000));
+            // Assert Data is accessible
+            Assert.AreEqual(10, bubbleSort.Data.Count);
+
+            bubbleSort.Sort();
+
+            // Validate Array is Sorted
+            Assert.IsTrue(bubbleSort.IsSorted());
         }
 
         [TestMethod]
-        [TestCategory("BubbleSort - ")]
+        [TestCategory("BubbleSort - Negative Numbers")]
         public void BubbleSort2()
         {
-            //var bubbleSort = new BubbleSort(4);
-            //bubbleSort.Add(4);
-            //bubbleSort.Add(3);
-            //bubbleSort.Add(2);
-            //bubbleSort.Add(1);
+            var bubbleSort = new BubbleSort();
+            Assert.IsTrue(bubbleSort.Add(20));
+            Assert.IsTrue(bubbleSort.Add(-13));
+            Assert.IsTrue(bubbleSort.Add(35));
+            Assert.IsTrue(bubbleSort.Add(157));
+            Assert.IsTrue(bubbleSort.Add(-1));
+            Assert.IsTrue(bubbleSort.Add(9));
 
-            //Assert.IsFalse(bubbleSort.Add(0));
+            bubbleSort.Sort();
 
-            //bubbleSort.Sort();
-
-            //Assert.IsTrue(bubbleSort.IsSorted());
+            Assert.IsTrue(bubbleSort.IsSorted());
         }
 
         [TestMethod]
-        [TestCategory("BubbleSort - ")]
-        public void BubbleSort3()
+        [TestCategory("ShellSort - Basic")]
+        public void SellSort1()
         {
-            //int size = 20;
+            var shellSort = new ShellSort();
+            Assert.IsTrue(shellSort.Add(43));
+            Assert.IsTrue(shellSort.Add(7));
+            Assert.IsTrue(shellSort.Add(11));
+            Assert.IsTrue(shellSort.Add(68));
+            Assert.IsTrue(shellSort.Add(55));
+            Assert.IsTrue(shellSort.Add(22));
+            Assert.IsTrue(shellSort.Add(102));
+            Assert.IsTrue(shellSort.Add(3));
 
-            //var bubbleSort = new BubbleSort(size);
+            shellSort.Sort();
 
-            //for (int i = size - 1; i >= 0; i--)
-            //{
-            //    Assert.IsTrue(bubbleSort.Add(i));
-            //}
-
-            //bubbleSort.Sort();
-
-            //Assert.IsTrue(bubbleSort.IsSorted());
+            Assert.IsTrue(shellSort.IsSorted());
         }
 
         [TestMethod]

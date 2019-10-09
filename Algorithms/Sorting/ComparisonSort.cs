@@ -6,17 +6,9 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Sorting
 {
-    /*
-        https://en.wikipedia.org/wiki/Bubble_sort
-     */
-    public class BubbleSort : ISort
+    public class ComparisonSort : ISort
     {
         public List<int> Data { get; set; }
-
-        public BubbleSort()
-        {
-            Data = new List<int>();
-        }
 
         public bool Add(int value)
         {
@@ -32,32 +24,6 @@ namespace Algorithms.Sorting
             }
 
             return false;
-        }
-
-        public void Sort()
-        {
-            try
-            {
-                if (Data != null && Data.Count > 1)
-                {
-                    for (int i = 0; i < Data.Count; i++)
-                    {
-                        for (int j = 0; j < (Data.Count - 1) - i; j++)
-                        {
-                            if (Data[j] > Data[j + 1])
-                            {
-                                var temp = Data[j];
-                                Data[j] = Data[j + 1];
-                                Data[j + 1] = temp;
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"\n\t{ex.InnerException}\n");
-            }
         }
 
         public bool IsSorted()
@@ -79,5 +45,7 @@ namespace Algorithms.Sorting
 
             return isSorted;
         }
+
+        public virtual void Sort() { }
     }
 }
