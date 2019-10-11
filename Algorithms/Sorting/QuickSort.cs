@@ -18,9 +18,14 @@ namespace Algorithms.Sorting
 
         public override void Sort()
         {
-            base.Sort();
-
-            QuicksortRecursive(Data, 0, Data.Count - 1);
+            try
+            {
+                QuicksortRecursive(Data, 0, Data.Count - 1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\n\t{ex.InnerException}\n");
+            }
         }
 
         private int Partition(List<int> numbers, int left, int right)

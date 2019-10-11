@@ -73,17 +73,36 @@ namespace AlgorithmsTests
         public void QuickSort1()
         {
             var quickSort = new QuickSort();
-            quickSort.Add(14);
-            quickSort.Add(11);
-            quickSort.Add(6);
-            quickSort.Add(3);
-            quickSort.Add(134);
-            quickSort.Add(44);
-            quickSort.Add(87);
+            Assert.IsTrue(quickSort.Add(14));
+            Assert.IsTrue(quickSort.Add(11));
+            Assert.IsTrue(quickSort.Add(6));
+            Assert.IsTrue(quickSort.Add(3));
+            Assert.IsTrue(quickSort.Add(134));
+            Assert.IsTrue(quickSort.Add(44));
+            Assert.IsTrue(quickSort.Add(87));
 
             quickSort.Sort();
 
             Assert.IsTrue(quickSort.IsSorted());
+        }
+
+        [TestMethod]
+        [TestCategory("MergeSort - Basic")]
+        public void MergeSort1()
+        {
+            var mergeSort = new MergeSort();
+            Assert.IsTrue(mergeSort.Add(11));
+            Assert.IsTrue(mergeSort.Add(9));
+            Assert.IsTrue(mergeSort.Add(27));
+            Assert.IsTrue(mergeSort.Add(15));
+            Assert.IsTrue(mergeSort.Add(2));
+            Assert.IsTrue(mergeSort.Add(64));
+            Assert.IsTrue(mergeSort.Add(57));
+            Assert.IsTrue(mergeSort.Add(33));
+
+            mergeSort.Sort();
+
+            Assert.IsTrue(mergeSort.IsSorted());
         }
     }
 }
