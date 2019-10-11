@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GraphTests.cs" />
     <Compile Include="SortingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DataStructures\DataStructures\DataStructures.csproj">
+      <Project>{783b7c19-f4f6-4d8f-8e32-437327902a6a}</Project>
+      <Name>DataStructures</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Algorithms\Algorithms.csproj">
       <Project>{d8bd6c4a-877b-45c4-998c-1b02188592e0}</Project>
       <Name>Algorithms</Name>
