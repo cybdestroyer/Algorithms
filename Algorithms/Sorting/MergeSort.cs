@@ -6,22 +6,14 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Sorting
 {
-    class MergeSort : ISort
+    class MergeSort : ComparisonSort
     {
-        public List<int> Data { get; }
-
-        
-        public bool Add(int value)
+        public MergeSort()
         {
-            return false;
+            Data = new List<int>();
         }
 
-        public bool IsSorted()
-        {
-            return false;
-        }
-
-        public void Sort()
+        public override void Sort()
         {
            
         }

@@ -9,32 +9,14 @@ namespace Algorithms.Sorting
     /*
         https://en.wikipedia.org/wiki/Bubble_sort
      */
-    public class BubbleSort : ISort
+    public class BubbleSort : ComparisonSort
     {
-        public List<int> Data { get; set; }
-
         public BubbleSort()
         {
             Data = new List<int>();
         }
 
-        public bool Add(int value)
-        {
-            try
-            {
-                Data.Add(value);
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"\n\t{ex.InnerException}\n");
-            }
-
-            return false;
-        }
-
-        public void Sort()
+        public override void Sort()
         {
             try
             {
@@ -58,26 +40,6 @@ namespace Algorithms.Sorting
             {
                 Console.WriteLine($"\n\t{ex.InnerException}\n");
             }
-        }
-
-        public bool IsSorted()
-        {
-            var isSorted = true;
-
-            try
-            {
-                for (int i = 0; i < (Data.Count - 1); i++)
-                {
-                    if (Data[i] > Data[i + 1])
-                        isSorted = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"\n\t{ex.InnerException}\n");
-            }
-
-            return isSorted;
         }
     }
 }
